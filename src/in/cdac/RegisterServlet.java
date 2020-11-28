@@ -15,6 +15,12 @@ public class RegisterServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		
+			response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
 		try 
 		{
 			//Reading Input from User
@@ -22,13 +28,14 @@ public class RegisterServlet extends HttpServlet {
 			String Name = request.getParameter("Name");
 			String Email = request.getParameter("Email");
 			String Password = request.getParameter("Password");
-			String RetypePassword = request.getParameter("RetypePassword");
+			//String RetypePassword = request.getParameter("RetypePassword");
 			String Hometown = request.getParameter("Hometown");
 			String Birthday = request.getParameter("Birthday");
 			String Twitter = request.getParameter("Twitter");
 			String Instagram = request.getParameter("Instagram");
 			String Reason = request.getParameter("Reason");
 			String Fanart = request.getParameter("Fanart");
+			
 			
 			//Preparing an Instance of User
 			User user = new User();
@@ -45,18 +52,12 @@ public class RegisterServlet extends HttpServlet {
 			
 			//DB Call
 			DBRegisterService.registerUser(user);
-			
 			response.sendRedirect("login.jsp");
-			/*response.getWriter().append("Served at: ").append(request.getContextPath());*/
 		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 	}
 
 }

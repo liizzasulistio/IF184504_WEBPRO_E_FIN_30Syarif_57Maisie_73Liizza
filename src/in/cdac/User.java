@@ -1,87 +1,44 @@
-package in.cdac;
-
-import java.sql.Date;
-
-public class User 
-{
-	private int UserID;
-	private String Username;
-	private String Name;
-	private String Email;
-	private String Password;
-	private String Hometown;
-	private String Birthday;
-	private String Twitter;
-	private String Instagram;
-	private String Reason;
-	private String Fanart;
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel='icon' href='favicon.ico?' type='image/x-icon' />
+		 <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"> 
+		<title>Member</title>
+	</head>
+	<body>
+		<div class="sidebar">
+			<img style="width: 50px; height: 50px;" src="images/dfi_logo.png" alt="DFI Logo">
+			<h2 style="color: #FFFFFF; display: inline;">DFI Project</h2>
+			<h2><a href="">Dashboard</a></h2>
+			<h2><a href="">My Profile</a></h2>
+			<h2><a href="">Project</a></h2>
+			<h2><a href="">Member</a></h2>
+			<h2><a href="">Report</a></h2>
+		</div>
+		
+		<div class="header" id="al-member">
+			<h2>Member</h2>
+		</div>
+		<form action="" style="margin-top: 70px;">
+				<button type="submit" style="display: inline; float: right; height: 45px;" class="button-1st">Submit</button>
+				<input type="text" placeholder="Search member.." name="search" class="form-control" style="float: right;">
+			</form>
+		
+		<div class="main-container2">
+			<div class="card-container">
+				<img src="" alt="avatar" style="border-radius: 100">
+				<h4>Dip</h4> <p style="display: inline;">dip_aisa</p>
+			</div>
+		</div>
+		
 	
-	public int getUserID() {
-		return UserID;
-	}
-	public void setUserID(int userID) {
-		UserID = userID;
-	}
-	public String getUsername() {
-		return Username;
-	}
-	public void setUsername(String username) {
-		Username = username;
-	}
-	public String getName() {
-		return Name;
-	}
-	public void setName(String name) {
-		Name = name;
-	}
-	public String getEmail() {
-		return Email;
-	}
-	public void setEmail(String email) {
-		Email = email;
-	}
-	public String getPassword() {
-		return Password;
-	}
-	public void setPassword(String password) {
-		Password = password;
-	}
-	public String getHometown() {
-		return Hometown;
-	}
-	public void setHometown(String hometown) {
-		Hometown = hometown;
-	}
-	public String getBirthday() {
-		return Birthday;
-	}
-	public void setBirthday(String birthday) {
-		Birthday = birthday;
-	}
-	public String getTwitter() {
-		return Twitter;
-	}
-	public void setTwitter(String twitter) {
-		Twitter = twitter;
-	}
-	public String getInstagram() {
-		return Instagram;
-	}
-	public void setInstagram(String instagram) {
-		Instagram = instagram;
-	}
-	public String getReason() {
-		return Reason;
-	}
-	public void setReason(String reason) {
-		Reason = reason;
-	}
-	public String getFanart() {
-		return Fanart;
-	}
-	public void setFanart(String fanart) {
-		Fanart = fanart;
-	}
 	
-
-}
+	
+	
+	</body>
+</html>
